@@ -10,9 +10,11 @@ let numeroImpar = 0; // declaro la variable numeroImpar con valor 0
 
 for (let i = 1; i <= 5; i++) { // creo un bucle que pida al usuario 5 numeros
   let numero = parseInt(prompt("Ingrese un numero")); // le pedimos al usuario un numero
+  while(isNaN(numero)){ // Validamos que el numero que ingreso el usuario sea valido
+    alert('Debe ingresar un numero valido')
+    numero = parseInt(prompt("Ingrese un numero")); // le pedimos al usuario un numero
+  }
   let mensaje = parImpar(numero); // guardamos en la variable mensaje el resultado que nos arroja la funcion
-
-
   if (mensaje === "es par") {
     numeroPar++; // incremento de uno en uno el valor de la variable si la funcion da el mensaje "es par"
   } else {
